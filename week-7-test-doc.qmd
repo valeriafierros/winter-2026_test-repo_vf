@@ -5,7 +5,7 @@ date: "2026-02-20"
 format: html
 editor: visual
 ---
-# Set up. 
+# Set up 
 ```{r}
 #| label: packages and data
 #| message: false
@@ -14,5 +14,21 @@ library(tidyverse) #general use package
 library(lterdatasampler) # package of datasets
 
 data(pie_crab) #crab size dataset
+```
+
+# exploratory data visualization
+```{r}
+#| label: latitude and size plot
+#| message: false
+
+#base layer
+ggplot(data = pie_crab, #data set
+       aes(x = latitude, # x axis
+           y = size))+ # y axis
+  #first layer: points to represent individual crabs
+  geom_point() 
+
+
+
 ```
 
